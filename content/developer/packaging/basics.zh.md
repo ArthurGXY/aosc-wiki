@@ -136,7 +136,9 @@ CHKSUMS="SKIP sha256::some_checksum sha256::sume_checksum"
   - `BUILDDEP` : 构建依赖（仅在构建时需要的软件包）。
   - `PKGRECOM` : 推荐依赖，在安装软件包时会自动安装，但可根据用户需要卸载。
 
-上面列出的只是最常见的几个配置项。Autobuild4 还有许多其他配置参数，但如果软件包依赖信息和构建流程相对标准，一般不会需要使用其他参数。Autobuild3 会自动填入编译器参数、构建系统等其他构建参数。
+上面列出的只是最常见的几个配置项。Autobuild4 还有许多其他配置参数，但如果软件包依赖信息和构建流程相对标准，一般不会需要使用其他参数。 关于这些参数的详细说明及规范，请参考 [AOSC OS 软件包样式指南](@/developer/packaging/package-styling-manual.zh.md)。
+
+Autobuild3 会自动填入编译器参数、构建系统等其他构建参数。
 
 以 `desktop-wm/i3` 为例：
 

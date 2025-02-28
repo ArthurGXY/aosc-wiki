@@ -136,7 +136,9 @@ This file contains the core configuration like:
   - `BUILDDEP` : Build dependencies (packages which are required during build-time, but not for run-time).
   - `PKGRECOM` : Recommended dependencies, installed automatically, but could be removed by user discretion.
 
-These are only the most common configuration entries. There are much more configurations, but if the software is fairly standard, these configuration should be enough. Other information like which compiler flags to use, which build system to use, can be filled automatically by Autobuild4.
+These are only the most common configuration entries. There are much more configurations, but if the software is fairly standard, these configuration should be enough. Detailed explanation and specifications can be found in the [Packaging Styling Manual](@/developer/packaging/packaging-styling-manual.md)
+
+Other information like which compiler flags to use, which build system to use, can be filled automatically by Autobuild4.
 
 Here is a basic example taken from `desktop-wm/i3`:
 
