@@ -54,10 +54,31 @@ Executed Packager <suffering@pakreq.work>
 亦不应过于详尽或复述来自上游项目的宣传性口吻：
 
     "Library with concise and convenient API for various MATE modules"
-    
+
+## 软件包分类
+
+软件包分类（`PKGSEC=` 或 `$PKGSEC`）用于将软件包归类到不同的类别中。保留此字段旨在兼容 Synaptics / aptitude 包管理器前端的行为。
+
+可用的字段值可以在 [AOSC-Dev/Autobuild4:sets/sections](https://github.com/AOSC-Dev/autobuild4/blob/master/sets/section) 中找到。此处列出几个典型：
+
+| 分类      | 描述                 | 举例                                               |
+|-----------|----------------------|---------------------------------------------------|
+| `admin`   | 系统管理工具          | `ansible`, `docker`, `systemd`   |
+| `devel`   | 开发工具              | `acbs`, `cmake`, `git-lfs`                        |
+| `kde`     | KDE 桌面环境的组件    | `bluedevil`, `kcalc`, `kate`                      |
+
+对于非自由的软件包，应使用带有 non-free 前缀的分类，例如：
+
+| 包名 | PKGSEC 字段值 |
+| --- | --- |
+| cuda | non-free/devel |
+| google-chrome | non-free/web |
+| ms-fonts | non-free/fonts |
+
+
 # Spec 文件
 
-在使用 [ACBS](https://github.com/AOSC-Dev/acbs)（Autobuild CI Build Service）时，会在名为 `spec` 的文件中定义多种变量，下面我们将讨论这些变量。 
+在使用 [ACBS](https://github.com/AOSC-Dev/acbs)（Autobuild CI Build Service）时，会在名为 `spec` 的文件中定义多种变量，下面我们将讨论这些变量。
 
 ## 软件包版本
 
